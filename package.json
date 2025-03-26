@@ -1,21 +1,56 @@
 {
   "name": "mirr-ui-rn",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.3",
+  "description": "Mirr UI React Native",
+  "type": "module",
+  "license": "MIT",
+  "main": "src/index.tsx",
   "scripts": {
     "start": "expo start --dev-client",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "expo": "~52.0.40",
     "expo-status-bar": "~2.0.1",
+    "mirr-ui-rn": "0.0.3",
     "react": "18.3.1",
     "react-native": "0.76.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "@chromatic-com/storybook": "^3",
+    "@storybook/addon-essentials": "^8.6.9",
+    "@storybook/addon-onboarding": "^8.6.9",
+    "@storybook/blocks": "^8.6.9",
+    "@storybook/experimental-addon-test": "^8.6.9",
+    "@storybook/react": "^8.6.9",
+    "@storybook/react-native-web-vite": "^8.6.9",
+    "@storybook/test": "^8.6.9",
+    "@types/react": "^19.0.12",
+    "@types/react-native": "^0.73.0",
+    "@vitest/browser": "^3.0.9",
+    "@vitest/coverage-v8": "^3.0.9",
+    "playwright": "^1.51.1",
+    "react-native-web": "^0.19.13",
+    "storybook": "^8.6.9",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.3",
+    "vitest": "^3.0.9"
   },
-  "private": true
+  "private": false,
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-native": ">=0.76.0"
+  }
 }
